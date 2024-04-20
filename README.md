@@ -7,9 +7,9 @@
 Share your files securely with FTP, Implicit FTPS, SFTP, HTTP, or HTTPS using CrushFTP
 
 ## Docker Features
-* Base: Alpine 3.12 Linux (microblink/java)
+* Base: Alpine Linux (latest)
+* Java: OpenJDK 11
 * CrushFTP 10
-* Size: 234.8MB
 
 This container is distributed under the [MIT Licence](LICENSE).
 
@@ -48,7 +48,7 @@ Run this container and mount the containers `/var/opt/CrushFTP10` volume to the 
 This command will create a new container and expose all ports. Remember to change the `<volume>` to a location on your host machine.
 
 ```
-docker run -p 21:21 -p 443:443 -p 2000-2100:2000-2100 -p 2222:2222 -p 8080:8080 -p 9090:9090 -v <volume>:/var/opt/CrushFTP10 markusmcnugen/crushftp:latest
+docker run -p 21:21 -p 443:443 -p 2000-2100:2000-2100 -p 2222:2222 -p 8080:8080 -p 9090:9090 -v <volume>:/var/opt/CrushFTP10 drlarsen77/crushftp:latest
 ```
 
 # CrushFTP Configuration
