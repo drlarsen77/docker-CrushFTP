@@ -1,9 +1,10 @@
-FROM microblink/java:latest
-MAINTAINER MarkusMcNugen
+FROM alpine:latest
+MAINTAINER drlarsen77
+# Forked from MarkusMcNugen
 # Forked from shokinn
 
 RUN apk upgrade --no-cache \
-    && apk --no-cache add bash bash-completion bash-doc ca-certificates curl wget \
+    && apk --no-cache add bash bash-completion bash-doc ca-certificates curl openjdk11 wget \
 	&& update-ca-certificates
 
 RUN wget -O /tmp/CrushFTP10.zip https://www.crushftp.com/early10/CrushFTP10.zip
